@@ -8,6 +8,7 @@ import CheckoutForm from "./components/CheckoutForm";
 import { useDarkMode } from "./hooks/useDarkMode";
 
 import "./App.css";
+import PlantPage from "./components/PlantPage";
 
 function App() {
   // array of plants that have been added to the cart
@@ -64,7 +65,8 @@ function App() {
         <Route
           exact
           path="/"
-          render={() => <PlantList addToCart={addToCart} />}
+          // render={() => <PlantList addToCart={addToCart} />}
+          render={() => <PlantPage addToCart={addToCart}/>}
         />
         <Route
           path="/cart"
