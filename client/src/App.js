@@ -5,7 +5,10 @@ import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 
+import { useDarkMode } from "./hooks/useDarkMode";
+
 import "./App.css";
+import PlantPage from "./components/PlantPage";
 
 function App() {
   // array of plants that have been added to the cart
@@ -19,6 +22,13 @@ function App() {
   // remove a plant from the cart
   const removeFromCart = (plant) => {
     setCart(cart.filter((p) => p.id !== plant.id));
+  };
+
+  // dark mode
+  const [darkMode, setDarkMode] = useDarkMode(false);
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
   };
 
   return (
@@ -42,12 +52,21 @@ function App() {
                 </span>
               </NavLink>
             </li>
+            <li>
+              <div className="dark-mode__toggle">
+                <div
+                  onClick={toggleMode}
+                  className={darkMode ? 'toggle toggled' : 'toggle'}
+                />
+              </div>
+            </li>
           </ul>
         </nav>
         <Route
           exact
           path="/"
-          render={() => <PlantList addToCart={addToCart} />}
+          // render={() => <PlantList addToCart={addToCart} />}
+          render={() => <PlantPage addToCart={addToCart}/>}
         />
         <Route
           path="/cart"
