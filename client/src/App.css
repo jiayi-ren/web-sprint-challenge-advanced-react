@@ -251,3 +251,74 @@ pre {
   color: #0e101c;
   border-bottom: 2px solid !important;
 }
+
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: #f68819;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  background-color: #cf0;
+}
+
+.dark-mode .container {
+  border-bottom: 1px solid black;
+}
+
+.dark-mode li {
+  background-color: black;
+}
+
+.dark-mode a {
+  color: white;
+}
+
+.dark-mode h1 {
+  color: black;
+}
+
+.dark-mode .cart-badge {
+  color: black;
+}
+
+.dark-mode .plant-details {
+  color: black;
+}
+
+.dark-mode .plant-name {
+  color: black;
+}
+
+.dark-mode .total{
+  color: black;
+}
+
+.dark-mode form{
+  background-color: #cf0;
+}
+
+.dark-mode h2 {
+  color: black;
+}
+
+.dark-mode label {
+  color: black;
+}
