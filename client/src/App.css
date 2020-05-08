@@ -322,3 +322,7 @@ pre {
 .dark-mode label {
   color: black;
 }
+
+.search-bar-wrapper {
+  margin-top: 10px;
+}
